@@ -26,6 +26,12 @@ public class Category {
     private List<Cheese> cheeses = new ArrayList<>();
 
 
+    public Category() {}
+
+    public Category(String name){
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }
@@ -38,7 +44,7 @@ public class Category {
         this.name = name;
     }
 
-
+    public List<Cheese> getCheeses(){
+        return cheeses;
+    }
 }
-
-

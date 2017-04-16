@@ -14,23 +14,22 @@
 <table class="table">
 
     <tr>
-        <th>Edit</th>
         <th>Name</th>
         <th>Description</th>
         <th>Category</th>
     </tr>
 
     <tr th:each="cheese : ${cheeses}">
-        <td><a th:href="'cheese/edit/' + ${cheese.id}" th:text="Edit"></a></td>
-        <td th:text="${cheese.name} + ' (' + ${cheese.id} + ')'"></td>
+        <td th:text="${cheese.name}"></td>
         <td th:text="${cheese.description}"></td>
-        <td th:text="${cheese.category.getName()}"></td>
+        <td th:text="${cheese.category.name}"></td>
     </tr>
 
 </table>
 
-<a th:href="@{cheese/add}">Add</a> |
-<a th:href="@{cheese/remove}">Remove</a>
+<nav>
+    <a th:href="@{add}">Add</a> | <a href="@{remove}">Remove</a>
+</nav>
 
 </body>
 </html>
